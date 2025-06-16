@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"    # tells Netlify to build for production
+  publish = "dist"             # where Vite outputs the built site
+
+[build.environment]
+  NODE_VERSION = "18"          # set Node.js version to 18
+
+# Optional: redirect all routes to index.html (useful for React Router)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
